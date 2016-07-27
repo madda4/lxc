@@ -298,6 +298,7 @@ EOF
 	cat >> "$1/etc/apt/sources.list.d/websupport.list" << EOF
 deb http://repo.websupport.sk/ubuntu ${release} main main-trusty public
 EOF
+	chroot $rootfs wget -O - http://repo.websupport.sk/key.txt | apt-key add -
 }
 
 install_packages()
