@@ -295,10 +295,10 @@ deb $MIRROR ${release}-updates main restricted universe multiverse
 deb $SECURITY_MIRROR ${release}-security main restricted universe multiverse
 EOF
     fi
-	cat >> "$1/etc/apt/sources.list.d/websupport.list" << EOF
-deb http://repo.websupport.sk/ubuntu ${release} main main-trusty public
-EOF
-	chroot $rootfs wget -O - http://repo.websupport.sk/key.txt | apt-key add -
+#	cat >> "$1/etc/apt/sources.list.d/websupport.list" << EOF
+#deb http://repo.websupport.sk/ubuntu ${release} main main-trusty public
+#EOF
+#	chroot $rootfs wget -O - http://repo.websupport.sk/key.txt | apt-key add -
 }
 
 install_packages()
